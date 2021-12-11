@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发表留言</title>
+</head>
+
+<body>
+    <style>
+        .contents{
+            height: 100px;
+            width: 300px;
+            margin-left: 50px;
+        }
+        .name{
+            height: 40px;
+            width: 400px;
+            margin-top: 30px;
+        }
+    </style>
+<div>
+    <h1> <a href="/">首页</a></h1>
+</div>
+<div>你可以给我留言了</div>
+    
+<form action="/comm" method="get">
+    <div class="name">
+        <label for="input-name">your name :</label>
+        <input type="text" required name="name" id="input-name" placeholder="请输入名称">
+    </div>
+    <br>
+    <div>
+        <label  for="text-message">你想说的话 :  </label>
+        <br>
+        <textarea rows="10" cols="30" name="message" class="contents" id="text-message" placeholder="请输入内容"></textarea>
+
+    </div>
+    <div>
+  
+        <button type="submit" >立即发表</button>
+    </div>
+</form>
+</body>
+</html>

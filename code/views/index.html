@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+</head>
+<body>
+    <script>
+
+        name:'lm'
+        content:'caoshaoihdaosjdaklsjdlakj'
+    </script>
+   <style>
+    body
+    {
+        background-color:#d0e4fe;
+    }
+    .title{
+     text-align: center;
+
+    }
+    .send{
+        background-color: darkseagreen;
+    }
+    </style>
+    <div class="title">
+        我的留言板
+    </div>
+    <div>
+        <a href="/post" class="button">发表留言</a>
+    </div>
+<div class="container">
+    <ul class="list-group">
+       
+        {{each comments}}
+        <li class="item">{{$value.name}} 拍了拍 {{$value.message}} 
+            <span>{{$value.dateTime}}</span>
+        </li>
+
+        {{/each}}
+        
+    </ul>
+</div>
+    
+</body>
+</html>
